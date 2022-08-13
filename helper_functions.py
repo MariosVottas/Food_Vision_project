@@ -1,9 +1,8 @@
-### We create a bunch of helpful functions throughout the course.
 ### Storing them here so they're easily accessible.
 
 import tensorflow as tf
 
-# Create a function to import an image and resize it to be able to be used with our model
+# Create a function to import an image and resize it to be able to be used with the models
 def load_and_prep_image(filename, img_shape=224, scale=True):
   """
   Reads in an image from filename, turns it into a tensor and reshapes into
@@ -34,7 +33,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.metrics import confusion_matrix
 
-# Our function needs a different name to sklearn's plot_confusion_matrix
+# This function needs a different name to sklearn's plot_confusion_matrix
 def make_confusion_matrix(y_true, y_pred, classes=None, figsize=(10, 10), text_size=15, norm=False, savefig=False): 
   """Makes a labelled confusion matrix comparing predictions and ground truth labels.
 
@@ -230,7 +229,6 @@ def compare_historys(original_history, new_history, initial_epochs=5):
     plt.show()
   
 # Create function to unzip a zipfile into current working directory 
-# (since we're going to be downloading and unzipping a few files)
 import zipfile
 
 def unzip_data(filename):
